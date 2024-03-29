@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=WindSong:wght@400;500&display=swap");
+
+/*.windsong-regular {
+  font-family: "WindSong", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.windsong-medium {
+  font-family: "WindSong", cursive;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+// <uniquifier>: Use a uniquifier for the class name
+// <weight>: Use a value from 100 to 900
+// <slant>: Use a value from -10 to 0
+
+.inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" <slant>;
+}
+*/
+/************* ROOT ***************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primaryColor: #593e26;
+  --secondColor: #f3c827;
+  --tertiaryColor: #f66909;
+  --contentColor: #1e150c;
+  --white: #fff;
+}
+
+/*************GENERAL *************/
+body {
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-family: "WindSong", cursive;
+  font-size: 8rem;
+  font-weight: 400;
+  color: var(--primaryColor);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primaryColor);
+  width: 100%;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--contentColor);
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--contentColor);
+}
+
+a {
+  text-decoration: none;
+}
+
+.button a:visited {
+  color: var(--white);
+}
+
+.button {
+  background-color: var(--tertiaryColor);
+  padding: 7px 10px;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  width: fit-content;
+  margin-top: 15px;
+  margin: 1rem auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.space-between {
+  justify-content: space-between;
+}
+.bg {
+  background-color: var(--secondColor);
+}
+
+.padding {
+  padding: 0 15%;
+}
+
+.margins {
+  margin: 6rem 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/************* HERO *****************/
+
+header {
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header div {
+  width: 60%;
+}
+
+header img {
+  width: 30%;
+}
+
+/***************** ENGAGEMENT *****************/
+
+.engagement p {
+  width: 45%;
+}
+
+/************** BIENFAITS *****************/
+
+.bienfaits div p {
+  width: 26.6%;
+}
+
+/************** PRODUIT **************/
+
+.cards {
+  width: 26.6%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 1%;
+  border-radius: 5px;
+}
+
+.cards img {
+  width: 100%;
+}
+
+.infoCarte {
+  width: 90%;
+}
+.infoCarte h3,p {
+  width: 100%;
+}
+
+/**************** FOOTER **************/
+
+footer div {
+  width: 26.6%;
+}
+
+/* colonne gauche*/
+footer address a {
+  display: block;
+  color: var(--contentColor);
+  margin-bottom: 5%;
+}
+
+footer address a i {
+  margin-right: 10px;
+}
+
+footer p {
+  margin-top: 20px;
+}
+
+/*colonne milieu*/
+
+.columnMiddle a i {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.columnMiddle a:visited,
+:active,
+:link {
+  color: var(--contentColor);
+}
+
+/*clonne droite*/
+
+.columnRight a:visited {
+  color: var(--contentColor);
+}
+
+.columnRight ul {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+/* responsive smarthone */
+@media screen and (min-width: 0) and (max-width: 575px) {
+  header {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  header img {
+    width: 60%;
+    text-align: center;
+  }
+  header > div {
+    width: 100%;
+  }
+
+  .button {
+    width: 60%;
+    text-align: center;
+    padding: 0 3px 4px 3px;
+    margin: 0 auto;
+  }
+  p {
+    line-height: 1.25rem;
+  }
+  h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 4rem;
+  }
+  a {
+    font-size: 10px;
+  }
+  h2 {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 1.5em;
+  }
+  .engagement p {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+  .bienfaits div p {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+  .cards {
+    width: 100%;
+    height: 25vh;
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+  .cards h3 {
+    font-size: 1rem;
+  }
+  .produit {
+    width: 100%;
+  }
+  .padding {
+    padding: 0 5%;
+  }
+  .cards img{
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px 0 0 5px;
+  }
+  .infoCarte {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 6px;
+    gap: 5px;
+  }
+
+  .cards>div {
+    width: 55%;
+  }
+  .cards .button {
+    width: fit-content;
+    height: fit-content;
+  }
+  .cards .button a {
+    font-size: 0.7rem;
+  }
+  footer {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .column-left {
+    width: 100%;
+  }
+}
+
+/* responsive tablette */
+@media screen and (min-width: 576px) and (max-width: 1180px) {
+  .cards {
+    width: 30%;
+  }
+  .bienfaits div p {
+    width: 40%;
+    padding: 15px;
+  }
+  .engagement p {
+    width: 45%;
+    padding: 15px;
+  }
+}
+footer {
+  margin-bottom: 10px;
+}
